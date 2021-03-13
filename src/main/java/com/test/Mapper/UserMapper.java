@@ -6,4 +6,5 @@ import org.apache.ibatis.annotations.Mapper;
 public class UserMapper {
 	Integer findbyuser;
 	Integer findbyusers;
+	Integer findbyusersss;
 }
