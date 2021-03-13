@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+	"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.test.Mapper.UserMapper">
+	<!--  -->
+	<select id="findbyusernamefromuser" resultType="com.test.entity.User">
+		select * from user where username=#{username}
+	</select>
+	
+	
+	<!--  -->
+	<insert id="insertbox">
+		insert into tbclassify(boxid,box,posid) values (#{boxid},#{box},#{posid})
+	</insert>
+	
+	
+	<!-- -->
+	<update id="updateboxfindbyid">
+		update tbclassify set posid=#{posid},box=#{box} where id=#{id}
+	</update>
+	
+	
+	<!--   -->
+	<delete id="deleteboxfindbyid">
+		delete from tbclassify where id=#{id}
+	</delete>
+	
+</mapper>
+
+
+
+
+
+

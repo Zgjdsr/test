@@ -2,9 +2,9 @@ package com.test.Mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 
+import com.test.entity.User;
+
 @Mapper
-public class UserMapper {
-	Integer findbyuser;
-	Integer findbyusers;
-	Integer findbyusersss;
+public interface UserMapper {
+	User findbyusernamefromuser();
 }
