@@ -10,7 +10,10 @@ import com.test.entity.UserRoleEntity;
 
 @Mapper
 public interface UserMapper {
+	//1
 	UserEntity findbyusernamefromuser(String username);
+	//2
 	RoleEntity findbyidfromrole(int id);
+	//3
 	List<UserRoleEntity> findbyuidfromuserrole(int uid);
 }

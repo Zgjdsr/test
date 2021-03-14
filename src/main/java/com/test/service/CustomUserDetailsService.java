@@ -22,18 +22,15 @@ import com.test.exception.BaseException;
 public class CustomUserDetailsService implements UserDetailsService {
 	@Autowired
 	private UserMapper userMapper;
-
 	@Override
 	public UserDetails loadUserByUsername(String username) {
 		Collection<GrantedAuthority> authorities = new ArrayList<>();
-		// 从数据库中取出用户信息
-		UserEntity user = userMapper.findbyusernamefromuser(username);
-		// 判断用户是否存在
-		if (user == null) {
+		UserEntity user = userMapper.findbyusernamefromuser(username);// 从数据库中取出用户信息
+		System.err.println("user:"+user);
+		if (user == null) {// 判断用户是否存在
 			try {
 				throw new BaseException("用户名不存在");
 			} catch (BaseException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -43,7 +40,6 @@ public class CustomUserDetailsService implements UserDetailsService {
 			RoleEntity role = userMapper.findbyidfromrole(userRole.getRid());
 			authorities.add(new SimpleGrantedAuthority(role.getRolename()));
 		}
-
 		// 返回UserDetails实现类
 		return new User(user.getUsername(), user.getPassword(), authorities);
 	}
