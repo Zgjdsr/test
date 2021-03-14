@@ -1,6 +1,6 @@
 package com.test.entity;
 
-public class Role {
+public class RoleEntity {
 	private int id;
 	private String rolename;
 	public int getId() {

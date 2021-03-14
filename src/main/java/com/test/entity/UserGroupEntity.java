@@ -1,6 +1,6 @@
 package com.test.entity;
 
-public class UserGroup {
+public class UserGroupEntity {
 	private int id;
 	private int uid;
 	private int gid;

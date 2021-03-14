@@ -1,6 +1,6 @@
 package com.test.entity;
 
-public class User {
+public class UserEntity {
 	private int id;
 	private String username;
 	private String password;

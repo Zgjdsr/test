@@ -1,6 +1,6 @@
 package com.test.entity;
 
-public class Group {
+public class GroupEntity {
 	private int id;
 	private String groupname;
 	public int getId() {
